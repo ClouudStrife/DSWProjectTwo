@@ -31,6 +31,16 @@ public class Cliente implements Serializable{
     private String sexo;
     private String dataNasc;
     
+    
+    
+    public void setId(int id){
+        this.id = id;
+    }
+    
+    public int getId(){
+        return this.id;
+    }
+    
     public void setNome(String nome){
         this.nome = nome;
     }
