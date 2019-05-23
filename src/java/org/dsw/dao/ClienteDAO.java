@@ -16,7 +16,7 @@ import org.dsw.pojo.Cliente;
 public class ClienteDAO extends GenericDAO<Cliente>{
 
     @Override
-    Cliente get(int id) {
+    public Cliente get(int id) {
         EntityManager em = this.getEntityManager();
         Cliente cliente = em.find(Cliente.class, id);
         em.close();
@@ -24,7 +24,7 @@ public class ClienteDAO extends GenericDAO<Cliente>{
     }
 
     @Override
-    List<Cliente> getAll() {
+    public List<Cliente> getAll() {
         EntityManager em = this.getEntityManager();
         Query q = em.createQuery("select c from Cliente c", Cliente.class);
         List<Cliente> clientes = q.getResultList();
@@ -33,7 +33,7 @@ public class ClienteDAO extends GenericDAO<Cliente>{
     }
 
     @Override
-    void insert(Cliente cliente) {
+    public void insert(Cliente cliente) {
         EntityManager em = this.getEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
@@ -43,7 +43,7 @@ public class ClienteDAO extends GenericDAO<Cliente>{
     }
 
     @Override
-    void update(Cliente cliente) {
+    public void update(Cliente cliente) {
         EntityManager em = this.getEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
@@ -53,7 +53,7 @@ public class ClienteDAO extends GenericDAO<Cliente>{
     }
 
     @Override
-    void delete(Cliente cliente) {
+    public void delete(Cliente cliente) {
         EntityManager em = this.getEntityManager();
         EntityTransaction tx = em.getTransaction();
         cliente = em.getReference(Cliente.class, cliente.getId());
