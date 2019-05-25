@@ -23,12 +23,12 @@ public class ClienteBean implements Serializable {
     private Cliente cliente;
     
     public String listClient(){
-        return "cliente/index.xhtml";
+        return "Cliente/listaClientes.xhtml";
     }
     
     public String insertClientForm(){
         cliente = new Cliente();
-        return "cliente/form.xhtml";
+        return "Cliente/form.xhtml";
     }
     
     public String insertClient(){
@@ -43,12 +43,12 @@ public class ClienteBean implements Serializable {
         return "index.xhtml";
     }
     
-    public List<Cliente> getClients() throws SQLException{
+    public List<Cliente> getClientes() throws SQLException{
         ClienteDAO clienteDAO = new ClienteDAO();
         return clienteDAO.getAll();
     }
     
-    public Cliente getClient(){
+    public Cliente getCliente(){
         return cliente;
     }
     
@@ -56,7 +56,5 @@ public class ClienteBean implements Serializable {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.delete(cliente);
         return "index.xhtml";
-    }
-    
-    
+    }    
 }

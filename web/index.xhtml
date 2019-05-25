@@ -1,16 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Home Page</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+    </h:head>
+
+    <h:body>
+        <div class="">
+            <ui:insert name="header">
+                <ui:include src="components/header.html" />
+            </ui:insert>
+            <ui:insert name="sideNav">
+                <ui:include src="components/sideNav.xhtml" />
+            </ui:insert>
+            <div class="container">
+                <div class="section white">
+                    <div class="row container">
+                        <h2 class="header">Locadora DSW Projeto 2</h2>
+                        <p class="grey-text text-darken-3 lighten-3">Este site é produto do primeiro trabalho de DSW utilizando JPA, JSF e JDB + Spring framework</p>
+                        <p><blockquote>Utilizando Materialize para o design</blockquote></p>      
+                    </div>
+                </div>
+                <div class="parallax-container">
+                    <div class="parallax"><img src="imgs/bikeBG.jpg"/></div>
+                </div>
+                <div class="section white">
+                    <div class="row container">
+                        <h2 class="header">O que foi implementado</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Requisito</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>CRUD CLIENTE</td>
+                                    <td>Feito</td>
+                                </tr>
+                                <tr>
+                                    <td>CRUD LOCADORA</td>
+                                    <td>Feito</td>
+                                </tr>
+                                <tr>
+                                    <td>SISTEMA LOGIN</td>
+                                    <td>Feito</td>
+                                </tr>
+                                <tr>
+                                    <td>CADASTRO LOCAÇÃO</td>
+                                    <td>Feito</td>
+                                </tr>
+                                <tr>
+                                    <td>LISTAGEM LOCADORAS</td>
+                                    <td>Feito</td>
+                                </tr>
+                                <tr>
+                                    <td>LISTAGEM POR CIDADE</td>
+                                    <td>Feito</td>
+                                </tr>
+                                <tr>
+                                    <td>LISTAGEM DE LOCAÇÕES</td>
+                                    <td>NÃ£o</td>
+                                </tr>
+                                <tr>
+                                    <td>VALIDAÇÃO DE ERROS</td>
+                                    <td>NÃ£o</td>
+                                </tr>
+                                <tr>
+                                    <td>INTERNACIONALIZAÇÃO</td>
+                                    <td>Parcialmente feito</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="parallax-container">
+                    <div class="parallax"><img src="imgs/bikeBG2.jpg"/></div>
+                </div>
+            </div>
+        </div>  
+    <ui:include src="components/scriptsMaterialize.html"/>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </h:body> 
 </html>

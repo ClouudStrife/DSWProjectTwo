@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ul id="slide-out" class="sidenav">
+        <h:form>
+            <h4  class="center-align">Menu de Administrador</h4>
+            <li><h:commandLink value="Cadastrar cliente" action="#{clienteBean.insertClientForm()}"><i class="material-icons">face</i></h:commandLink></li>              
+            <li><a href="cadastroLocadoraJSP.jsp"><i class="material-icons">home</i>Cadastrar locadora</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Listagem</a></li>
+            <li><a href="listarLocadoras"><i class="material-icons">list</i>Listar locadoras</a></li>
+            <li><a href="listarClientes"><i class="material-icons">list</i>Listar clientes</a></li>
+        </h:form>
+    </ul>
+</html>
