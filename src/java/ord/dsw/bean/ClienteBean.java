@@ -22,7 +22,7 @@ public class ClienteBean implements Serializable {
     
     private Cliente cliente;
     
-    public String listClient(){
+    public String listClients(){
         return "Cliente/listaClientes.xhtml";
     }
     
