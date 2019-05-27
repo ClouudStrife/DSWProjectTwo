@@ -19,13 +19,21 @@ import javax.persistence.NamedQuery;
 public class Locadora implements Serializable{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     
     private String nome;
     private String email;
     private String senha;
     private String CNPJ;
     private String cidade;
+    
+    public void setId(Long id){
+        this.id = id;
+    }
+    
+    public Long getId(){
+        return this.id;
+    }
     
     public void setNome(String nome){
         this.nome = nome;
