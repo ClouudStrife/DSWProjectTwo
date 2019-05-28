@@ -23,12 +23,12 @@ public class ClienteBean implements Serializable {
     private Cliente cliente;
     
     public String listClients(){
-        return "Cliente/listaClientes.xhtml";
+        return "/cliente/listaClientes.xhtml?faces-redirect=true";
     }
     
     public String insertClientForm(){
         cliente = new Cliente();
-        return "Cliente/form.xhtml";
+        return "/cliente/form.xhtml?faces-redirect=true";
     }
     
     public String update(Long id) {
@@ -46,7 +46,7 @@ public class ClienteBean implements Serializable {
             clienteDAO.update(cliente);
         }
         
-        return "Cliente/listaClientes.xhtml";
+        return "listaClientes.xhtml";
     }
     
     public List<Cliente> getClientes() throws SQLException{
