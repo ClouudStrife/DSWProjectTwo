@@ -31,6 +31,12 @@ public class ClienteBean implements Serializable {
         return "Cliente/form.xhtml";
     }
     
+    public String update(Long id) {
+        ClienteDAO clienteDAO = new ClienteDAO();
+        cliente = clienteDAO.get(id);
+        return "form.xhtml";
+    }
+    
     public String insertClient(){
         ClienteDAO clienteDAO = new ClienteDAO();
         if (cliente.getId() == null){
@@ -40,7 +46,7 @@ public class ClienteBean implements Serializable {
             clienteDAO.update(cliente);
         }
         
-        return "index.xhtml";
+        return "Cliente/listaClientes.xhtml";
     }
     
     public List<Cliente> getClientes() throws SQLException{
@@ -55,6 +61,6 @@ public class ClienteBean implements Serializable {
     public String deleteClient(Cliente cliente) {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.delete(cliente);
-        return "index.xhtml";
+        return "listClients.xhtml";
     }    
 }

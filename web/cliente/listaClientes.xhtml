@@ -52,7 +52,7 @@ and open the template in the editor.
                     <h:column>  
                         <f:facet name="header">Ações</f:facet> 
                         <h:commandLink class="secondary-content" action="#{clienteBean.deleteClient(cliente)}"><i class="material-icons">delete</i></h:commandLink>
-                        <h:commandLink class="secondary-content"><i class="material-icons">mode_edit</i></h:commandLink>                       
+                        <h:commandLink class="secondary-content" action="#{clienteBean.update(cliente.id)}"><i class="material-icons">mode_edit</i></h:commandLink>                       
                     </h:column>
                 </h:dataTable> 
             </h:form>

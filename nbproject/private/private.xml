@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/Cliente/listaClientes.xhtml</file>
+            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/cliente/listaClientes.xhtml</file>
+            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/components/sideNav.xhtml</file>
             <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/src/java/ord/dsw/bean/ClienteBean.java</file>
+            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/cliente/form.xhtml</file>
         </group>
     </open-files>
 </project-private>

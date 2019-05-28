@@ -16,7 +16,7 @@ import org.dsw.pojo.Cliente;
 public class ClienteDAO extends GenericDAO<Cliente>{
 
     @Override
-    public Cliente get(int id) {
+    public Cliente get(Long id) {
         EntityManager em = this.getEntityManager();
         Cliente cliente = em.find(Cliente.class, id);
         em.close();
