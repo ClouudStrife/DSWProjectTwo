@@ -28,33 +28,45 @@
                 <h:form>                   
                     <div class="row">
                         <div class="input-field col s6">                            
-                            <h:inputText value="#{clienteBean.cliente.nome}" id="first_name" class="validate"/>
+                            <h:inputText value="#{clienteBean.cliente.nome}" id="first_name" class="validate" validatorMessage="Campo obrigatório">
+                                <f:validateRequired/>
+                            </h:inputText>
                             <label for="first_name">Nome</label>                         
                         </div>
                         <div class="input-field col s6">                          
-                            <h:inputText value="#{clienteBean.cliente.email}"  id="email"  class="validate"/>
+                            <h:inputText value="#{clienteBean.cliente.email}"  id="email"  class="validate">
+                                <f:validateRequired/>
+                            </h:inputText>
                             <label for="email">E-mail</label>                         
                         </div>
                     </div>
                     <div class="row">                           
                         <div class="input-field col s12">    
-                            <h:inputText value="#{clienteBean.cliente.senha}" id="password" class="validate"/>
+                            <h:inputText value="#{clienteBean.cliente.senha}" id="password" class="validate">
+                                <f:validateRequired/>
+                            </h:inputText>
                             <label for="password">Senha</label>                           
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">                                          
-                            <h:inputText value="#{clienteBean.cliente.telefone}" id="phone" class="validate"/>
+                            <h:inputText value="#{clienteBean.cliente.telefone}" id="phone" class="validate">
+                                <f:validateRequired/>
+                            </h:inputText>
                             <label for="phone">Telefone</label>                           
                         </div>
                         <div class="input-field col s6">                                                       
-                            <h:inputText value="#{clienteBean.cliente.CPF}" id="cpf" class="validate"/>
+                            <h:inputText value="#{clienteBean.cliente.CPF}" id="cpf" class="validate">
+                                <f:validateRequired/>
+                            </h:inputText>
                             <label for="cpf">CPF</label>                                                      
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">                            
-                            <h:inputText value="#{clienteBean.cliente.dataNasc}" id="birthDate" class="datepicker"/>
+                            <h:inputText value="#{clienteBean.cliente.dataNasc}" id="birthDate" class="datepicker">
+                                <f:validateRequired/>
+                            </h:inputText>
                             <label for="birthDate">Data de nascimento</label>                           
                         </div>
                         <div class="input-field col s6">                                                     
