@@ -23,12 +23,18 @@ public class LocadoraBean implements Serializable {
     private Locadora locadora;
     
     public String listLocadoras(){
-        return "Locadora/listaLocadoras.xhtml";
+        return "/locadora/listaLocadoras.xhtml?faces-redirect=true";
     }
     
     public String insertLocadoraForm(){
         locadora = new Locadora();
-        return "Locadora/form.xhtml";
+        return "/locadora/form.xhtml?faces-redirect=true";
+    }
+    
+    public String update(Long id) {
+        LocadoraDAO locadoraDAO = new LocadoraDAO();
+        locadora = locadoraDAO.get(id);
+        return "form.xhtml";
     }
     
     public String insertLocadora(){
@@ -40,7 +46,7 @@ public class LocadoraBean implements Serializable {
             locadoraDAO.update(locadora);
         }
         
-        return "index.xhtml";
+        return "listaLocadoras.xhtml";
     }
     
     public List<Locadora> getLocadoras() throws SQLException{
@@ -55,6 +61,6 @@ public class LocadoraBean implements Serializable {
     public String deleteLocadora(Locadora locadora) {
         LocadoraDAO locadoraDAO = new LocadoraDAO();
         locadoraDAO.delete(locadora);
-        return "index.xhtml";
+        return "listaLocadoras.xhtml";
     }    
 }
