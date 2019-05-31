@@ -29,8 +29,7 @@
                 <h:form>                   
                     <div class="row">
                         <div class="input-field col s6">                            
-                            <h:inputText value="#{clienteBean.cliente.nome}" id="first_name" class="validate" validatorMessage="Campo obrigatório"
-                                         >
+                            <h:inputText value="#{clienteBean.cliente.nome}" id="first_name" class="validate" >
                                 <f:validateRequired/>
                             </h:inputText>
                             <label for="first_name">Nome</label>                         
@@ -54,13 +53,15 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s6">                                          
-                            <h:inputText value="#{clienteBean.cliente.telefone}" id="phone" class="validate">
+                            <h:inputText value="#{clienteBean.cliente.telefone}" id="phone" class="validate"
+                                         a:type="Number">
                                 <f:validateRequired/>
                             </h:inputText>
                             <label for="phone">Telefone</label>                           
                         </div>
                         <div class="input-field col s6">                                                       
-                            <h:inputText value="#{clienteBean.cliente.CPF}" id="cpf" class="validate">
+                            <h:inputText value="#{clienteBean.cliente.CPF}" id="cpf" class="validate"
+                                         a:type="Number">
                                 <f:validateRequired/>
                             </h:inputText>
                             <label for="cpf">CPF</label>                                                      
