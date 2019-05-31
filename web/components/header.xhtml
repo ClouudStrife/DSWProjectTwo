@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.springframework.org/security/tags">
+    <nav class="red darken-4">
+        <div class="nav-wrapper">
+            <sec:authorize access="hasRole('ADMIN')">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+            </sec:authorize>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.jsp">Menu</a></li>
+                <sec:authorize access="hasRole('USER')">
+                    <li><a href="#">Minhas locacoes</a></li>
+                    <li><a href="listarLocadoras">Alugar</a></li>
+                </sec:authorize>     
+                <sec:authorize access="hasAnyRole('ADMIN', 'USER')">
+                    <li><a href="logout">Logout</a></li>
+                </sec:authorize>
+                <sec:authorize access="isAnonymous()">
+                    <li><a href="listarLocadoras">Locadoras</a></li>
+                    <li><a href="login">Login</a></li>
+                </sec:authorize> 
+            </ul>
+        </div>
+    </nav>
+</html>

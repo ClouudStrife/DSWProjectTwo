@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/java/org/dsw/AppConfig.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>44</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/cliente/listaClientes.xhtml</file>
-            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/components/sideNav.xhtml</file>
-            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/src/java/ord/dsw/bean/ClienteBean.java</file>
-            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/cliente/form.xhtml</file>
+            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/src/java/org/dsw/AppSecurityInitializer.java</file>
+            <file>file:/C:/Users/gbgus/Desktop/DSWProjectTwo/web/components/header.xhtml</file>
         </group>
     </open-files>
 </project-private>
