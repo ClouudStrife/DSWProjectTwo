@@ -10,7 +10,7 @@ and open the template in the editor.
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Lista Locadoras</title>
+        <title>#{msg['listalocadoras']}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <ui:insert name="header">
             <ui:include src="../components/linksImportMaterialize.xhtml" />
@@ -24,17 +24,17 @@ and open the template in the editor.
             <ui:include src="../components/sideNav.xhtml" />
         </ui:insert>
         <div class="container">
-            <h3 class="center-align">Lista de locadoras</h3>
+            <h3 class="center-align">#{msg['listalocadoras']}</h3>
             <div class="divider"/>
             <h:form>
                 <h:dataTable value="#{locadoraBean.locadoras}" var="locadora"   
                              class="highlight">   
                     <h:column>  
-                        <f:facet name="header">Nome</f:facet>  
+                        <f:facet name="header">#{msg['nome']}</f:facet>  
                         <h:outputText value="#{locadora.nome}"/>  
                     </h:column>  
                     <h:column>  
-                        <f:facet name="header">Email</f:facet>  
+                        <f:facet name="header">E-mail</f:facet>  
                         <h:outputText value="#{locadora.email}"/>  
                     </h:column>
                     <h:column>  
@@ -42,11 +42,11 @@ and open the template in the editor.
                         <h:outputText value="#{locadora.CNPJ}"/>  
                     </h:column>
                     <h:column>  
-                        <f:facet name="header">Cidade</f:facet>  
+                        <f:facet name="header">#{msg['cidade']}</f:facet>  
                         <h:outputText value="#{locadora.cidade}"/>  
                     </h:column>
                     <h:column>  
-                        <f:facet name="header">Ações</f:facet> 
+                        <f:facet name="header">#{msg['acoes']}</f:facet> 
                         <h:commandLink class="secondary-content" action="#{locadoraBean.deleteLocadora(locadora)}"><i class="material-icons">delete</i></h:commandLink>
                         <h:commandLink class="secondary-content" action="#{locadoraBean.update(locadora.id)}"><i class="material-icons">mode_edit</i></h:commandLink>                       
                     </h:column>
