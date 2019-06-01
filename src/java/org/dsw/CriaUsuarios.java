@@ -31,19 +31,8 @@ public class CriaUsuarios {
         u1.getPapel().add(p1);
         usuarioDAO.update(u1);
 
-        // Criando Usuario user com papel ROLE_USER
-        
-        Usuario u2 = new Usuario();
-        u2.setEmail("user@user");
-        u2.setSenha(encoder.encode("user"));
-        u2.setAtivo(true);
-        usuarioDAO.insert(u2);
-
         Papel p2 = new Papel();
-        p2.setNome("ROLE_USER");
+        p2.setNome("ROLE_CLIENTE");
         papelDAO.insert(p2);
-
-        u2.getPapel().add(p2);
-        usuarioDAO.update(u2);
     }
 }

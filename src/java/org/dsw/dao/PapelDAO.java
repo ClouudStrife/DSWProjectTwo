@@ -12,8 +12,8 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-public class PapelDAO extends GenericDAO<Papel>{
-    
+public class PapelDAO extends GenericDAO<Papel> {
+
     @Override
     public void insert(Papel papel) {
         EntityManager em = this.getEntityManager();
@@ -23,7 +23,7 @@ public class PapelDAO extends GenericDAO<Papel>{
         tx.commit();
         em.close();
     }
-    
+
     @Override
     public List<Papel> getAll() {
         EntityManager em = this.getEntityManager();
@@ -42,7 +42,7 @@ public class PapelDAO extends GenericDAO<Papel>{
         em.remove(papel);
         tx.commit();
     }
-    
+
     @Override
     public void update(Papel papel) {
         EntityManager em = this.getEntityManager();
@@ -60,5 +60,11 @@ public class PapelDAO extends GenericDAO<Papel>{
         em.close();
         return papel;
     }
-}
 
+    public Papel getRole(String papel) {       
+        EntityManager em = this.getEntityManager();
+        Papel retPapel = em.find(Papel.class, papel);
+        em.close();
+        return retPapel;
+    }
+}

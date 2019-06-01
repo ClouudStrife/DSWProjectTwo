@@ -18,27 +18,16 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQueries({@NamedQuery(name = "Cliente.findAll", query = "SELECT u FROM Cliente u"),
         @NamedQuery(name = "Cliente.findByCPF", query = "SELECT u FROM Cliente u WHERE u.CPF = :CPF")})
-public class Cliente implements Serializable{
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
-    
+public class Cliente extends Usuario implements Serializable{   
     private String nome;
-    private String email;
-    private String senha;
     private String CPF;
     private String telefone;
     private String sexo;
     private String dataNasc;
     
     
-    
-    public void setId(Long id){
-        this.id = id;
-    }
-    
-    public Long getId(){
-        return this.id;
+    public Cliente(){
+        this.setAtivo(true);
     }
     
     public void setNome(String nome){
@@ -48,22 +37,7 @@ public class Cliente implements Serializable{
     public String getNome(){
         return this.nome;
     }
-    
-    public void setEmail(String email){
-        this.email = email;
-    }
-    
-    public String getEmail(){
-        return this.email;
-    }
-    
-    public void setSenha(String senha){
-        this.senha = senha;
-    }
-    
-    public String getSenha(){
-        return this.senha;
-    }
+
     
     public void setCPF(String CPF){
         this.CPF = CPF;
