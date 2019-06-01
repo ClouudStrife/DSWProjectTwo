@@ -14,7 +14,7 @@ and open the template in the editor.
             </sec:authorize>
 
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.jsp">Menu</a></li>
+                <li><a href="#{request.contextPath}/index.xhtml">Menu</a></li>
                 <sec:authorize access="hasRole('USER')">
                     <li><a href="#">Minhas locacoes</a></li>
                     <li><a href="listarLocadoras">Alugar</a></li>
