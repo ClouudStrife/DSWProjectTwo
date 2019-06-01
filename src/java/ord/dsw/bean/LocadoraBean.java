@@ -23,12 +23,12 @@ public class LocadoraBean implements Serializable {
     private Locadora locadora;
     
     public String listLocadoras(){
-        return "/locadora/listaLocadoras.xhtml?faces-redirect=true";
+        return "/Locadora/listaLocadoras.xhtml?faces-redirect=true";
     }
     
     public String insertLocadoraForm(){
         locadora = new Locadora();
-        return "/locadora/form.xhtml?faces-redirect=true";
+        return "/Locadora/form.xhtml?faces-redirect=true";
     }
     
     public String update(Long id) {
