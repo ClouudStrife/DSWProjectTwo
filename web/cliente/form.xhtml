@@ -5,7 +5,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough" >
     <h:head>
-        <title>Cadastrar Cliente</title>
+        <title>#{msg['cadastrocliente']}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -21,7 +21,7 @@
         </ui:insert>
         <div class="container">
             <div class="section">
-                <h3 class="center-align">Cadastro cliente</h3>
+                <h3 class="center-align">#{msg['cadastrocliente']}</h3>
             </div>
             <div class="divider"></div>
             <br/>
@@ -32,7 +32,7 @@
                             <h:inputText value="#{clienteBean.cliente.nome}" id="first_name" class="validate" >
                                 <f:validateRequired/>
                             </h:inputText>
-                            <label for="first_name">Nome</label>                         
+                            <label for="first_name">#{msg['nome']}</label>                         
                         </div>
                         <div class="input-field col s6">                          
                             <h:inputText value="#{clienteBean.cliente.email}"  id="email"  class="validate"
@@ -48,7 +48,7 @@
                                          a:type="password">
                                 <f:validateRequired/>
                             </h:inputText>
-                            <label for="password">Senha</label>                           
+                            <label for="password">#{msg['senha']}</label>                           
                         </div>
                     </div>
                     <div class="row">
@@ -57,7 +57,7 @@
                                          a:type="Number">
                                 <f:validateRequired/>
                             </h:inputText>
-                            <label for="phone">Telefone</label>                           
+                            <label for="phone">#{msg['telefone']}</label>                           
                         </div>
                         <div class="input-field col s6">                                                       
                             <h:inputText value="#{clienteBean.cliente.CPF}" id="cpf" class="validate"
@@ -72,18 +72,18 @@
                             <h:inputText value="#{clienteBean.cliente.dataNasc}" id="birthDate" class="datepicker">
                                 <f:validateRequired/>
                             </h:inputText>
-                            <label for="birthDate">Data de nascimento</label>                           
+                            <label for="birthDate">#{msg['datanascimento']}</label>                           
                         </div>
                         <div class="input-field col s6">                                                     
                             <h:selectOneMenu value="#{clienteBean.cliente.sexo}">
-                                <f:selectItem itemLabel="Masculino" itemValue="M"/>
-                                <f:selectItem itemLabel="Feminino" itemValue="F"/>
+                                <f:selectItem itemLabel="#{msg['masculino']}" itemValue="M"/>
+                                <f:selectItem itemLabel="#{msg['feminino']}" itemValue="F"/>
                             </h:selectOneMenu>                           
-                            <label>Sexo</label>
+                            <label>#{msg['sexo']}</label>
                         </div>
                     </div>
                     <div class="row center-align">                                               
-                        <h:commandButton class="btn center-align waves-effect waves-light red lighten-1 center-align" action="#{clienteBean.insertClient()}" value="Cadastrar"></h:commandButton>                      
+                        <h:commandButton class="btn center-align waves-effect waves-light red lighten-1 center-align" action="#{clienteBean.insertClient()}" value="#{msg['cadastrar']}"></h:commandButton>                      
                     </div>
                 </h:form>
             </div>
