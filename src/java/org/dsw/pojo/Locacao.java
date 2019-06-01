@@ -16,7 +16,9 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQueries({@NamedQuery(name = "Locacao.findAll", query = "SELECT u FROM Locacao u")})
+@NamedQueries({@NamedQuery(name = "Locacao.findAll", query = "SELECT u FROM Locacao u"),
+@NamedQuery(name = "Locadora.findByClienteId", query = "SELECT u FROM Locadora u WHERE u.clienteId = :clienteId"),
+@NamedQuery(name = "Locadora.findByLocadoraId", query = "SELECT u FROM Locadora u WHERE u.locadoraId = :locadoraId")})
 public class Locacao implements Serializable{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
