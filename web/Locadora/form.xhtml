@@ -4,7 +4,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Cadastrar Locadora</title>
+        <title>#{msg['cadastrolocadora']}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -20,7 +20,7 @@
         </ui:insert>
         <div class="container">
             <div class="section">
-                <h3 class="center-align">Cadastro locadora</h3>
+                <h3 class="center-align">#{msg['cadastrolocadora']}</h3>
             </div>
             <div class="divider"></div>
             <br/>
@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="input-field col s6">                            
                             <h:inputText value="#{locadoraBean.locadora.nome}" id="first_name" class="validate"/>
-                            <label for="first_name">Nome</label>                         
+                            <label for="first_name">#{msg['nome']}</label>                         
                         </div>
                         <div class="input-field col s6">                          
                             <h:inputText value="#{locadoraBean.locadora.email}"  id="email"  class="validate"/>
@@ -39,7 +39,7 @@
                     <div class="row">                           
                         <div class="input-field col s12">    
                             <h:inputText value="#{locadoraBean.locadora.senha}" id="password" class="validate"/>
-                            <label for="password">Senha</label>                           
+                            <label for="password">#{msg['senha']}</label>                           
                         </div>
                     </div>
                     <div class="row">
@@ -49,11 +49,11 @@
                         </div>
                         <div class="input-field col s6">                                                       
                             <h:inputText value="#{locadoraBean.locadora.cidade}" id="cidade" class="validate"/>
-                            <label for="cidade">Cidade</label>                                                      
+                            <label for="cidade">#{msg['cidade']}</label>                                                      
                         </div>
                     </div>
                     <div class="row center-align">                                               
-                        <h:commandButton class="btn center-align waves-effect waves-light red lighten-1 center-align" action="#{locadoraBean.insertLocadora()}" value="Cadastrar"></h:commandButton>                      
+                        <h:commandButton class="btn center-align waves-effect waves-light red lighten-1 center-align" action="#{locadoraBean.insertLocadora()}" value="#{msg['cadastrar']}"></h:commandButton>                      
                     </div>
                 </h:form>
             </div>
