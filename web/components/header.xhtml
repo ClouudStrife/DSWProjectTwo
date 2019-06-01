@@ -16,7 +16,7 @@ and open the template in the editor.
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#{request.contextPath}/index.xhtml">Menu</a></li>
                 <sec:authorize access="hasRole('USER')">
-                    <li><a href="#">Minhas locacoes</a></li>
+                    <li><a href="listLocacoes">Minhas locacoes</a></li>
                     <li><a href="listarLocadoras">Alugar</a></li>
                 </sec:authorize>     
                 <sec:authorize access="hasAnyRole('ADMIN', 'USER')">
