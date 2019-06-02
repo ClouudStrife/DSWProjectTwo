@@ -33,6 +33,9 @@
                         </div>
                         <div class="input-field col s4">                          
                             <h:inputText value="#{locacaoBean.locacao.locadoraId}"  id="locadora_id"  class="validate"/>
+                            <h:selectOneMenu id="locadora_id" value="#{locacaoBean.locacao.locadoraId}">
+                                <f:selectItems value="#{locadoraBean.getLocadoras()}" />
+                            </h:selectOneMenu>
                             <label for="locadora_id">Locadora</label>                         
                         </div>
                         <div class="input-field col s4">                          

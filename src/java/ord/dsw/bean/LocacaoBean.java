@@ -7,6 +7,7 @@ package ord.dsw.bean;
 
 import org.dsw.dao.LocacaoDAO;
 import org.dsw.pojo.Locacao;
+import org.dsw.pojo.Usuario;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -28,6 +29,12 @@ public class LocacaoBean implements Serializable {
     
     public String insertLocacaoForm(){
         locacao = new Locacao();
+        Usuario user = SecurityContextHolder.getContext().getAuthentication();
+        // if (user.getPapel().contains("ADMIN")) {
+        //    locacao.setLocadoraId(user.getId());
+        // } else {
+            locacao.setClientId(user.getId());
+        // }
         return "/Locacao/form.xhtml?faces-redirect=true";
     }
     
